@@ -15,7 +15,18 @@ def operations_sort(operations):
     return latest_operations
 
 
-operations = operations_loading()
-latest_operation_id = operations_sort(operations)
-
-print(latest_operation_id)
+def print_operation(id_num, operations):
+    """ Распечатывает операцию по ее номеру в формате требуемом по ТЗ"""
+    for item in operations:
+        if item['id'] == id_num:
+            if 'date' in item:
+                print(item['date'][8:10]+'.'+item['date'][5:7]+'.'+item['date'][0:4], end=' ')
+            if 'description' in item:
+                print(item['description'])
+            if 'from' in item:
+                print(item['from'][:-12], item['from'][-12:-10] + '**', '****', item['from'][-4:], '-> ', end='')
+            if 'to' in item:
+                print(item['to'][:-21], '**' + item['to'][-4:])
+            if 'operationAmount' in item:
+                print(item['operationAmount']['amount'], item['operationAmount']['currency']['name'])
+            break
