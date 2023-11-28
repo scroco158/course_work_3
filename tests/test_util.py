@@ -1,8 +1,8 @@
 from src import utils
 import os
 
+
 def test_operations_loading():
-    print(os.getcwd())
     operations = utils.operations_loading()
     assert len(operations) == 101
 
