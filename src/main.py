@@ -1,8 +1,6 @@
 import utils
-import os
 
 
-print(os.getcwd())
 # Загрузка данных
 operations = utils.operations_loading()
 

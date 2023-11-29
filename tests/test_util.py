@@ -1,5 +1,4 @@
 from src import utils
-import os
 
 
 def test_operations_loading():

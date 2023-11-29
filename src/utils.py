@@ -1,6 +1,7 @@
 import json
 import os
 
+
 def operations_loading():
     """Загружает данные по операциям из файла"""
     with open(os.path.abspath('./data/operations.json'), 'r', encoding='utf-8') as file:
