@@ -1,13 +1,13 @@
-import util
+import utils
+
 
 # Загрузка данных
-operations = util.operations_loading()
+operations = utils.operations_loading()
 
 # Получаем список id номеров последних 5 операций
-latest_operations_id = util.operations_sort(operations)
+operations_for_print = utils.operations_sort(operations)
 
 # Печать операций
 print()
-for item in latest_operations_id:
-    util.print_operation(item, operations)
-    print()
+utils.print_operation(operations_for_print)
+print()
